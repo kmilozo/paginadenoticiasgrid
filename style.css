@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    margin: 0 auto;
+    width: 90%; 
+    display: grid;
+    grid-template-columns: auto ;
+    
+}
+   
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+header #menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+#menu{
+    width: 45%;
+    list-style: none;
+
+}
+#menu li a{
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 60% 36%;
+    justify-content: space-between;
+}
+ #banner #img-desktop{
+    width: 100%;
+}
+#banner #img-mobile{
+    width: 100%;
+    display: none;
+}
+#textos{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+#textos #titulo{
+    width: 42%;
+    font-size: 46px;
+    font-weight: 600;
+}
+#textos #descripcion{
+    width: 50%;
+}
+ #descripcion > p{
+    font-size: 14px;
+    line-height: 25px;
+    padding-right: 40px;
+    margin-bottom: 18px;
+}
+#descripcion button{
+ background-color: #D95449;
+ color: white;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ font-size: 12px;
+ padding: 10px 12px;
+ border: none;
+}
+#descripcion button:hover{
+    background-color: #00001a;
+}
+#content aside{
+   background-color: #00001a;
+   color: white;
+   padding: 20px;
+}
+#content aside h1{
+    color: #eaae54;
+    margin: 25px 0;
+    font-size: 35px;
+}
+#content .card{
+    padding: 20px 0;
+}
+
+#content .card h3 a{
+    text-decoration: none;
+    color: white;
+    
+}
+#content .card h3 a:hover{
+    color: #eaae54;
+}
+
+#content .card h3{
+    margin: 15px 0;
+}
+footer{
+    display: grid;
+    grid-template-columns: 36% 36% 36%;
+    margin-top: 40px;
+}
+footer .footer-card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.footer-card #img-footer{
+    width: 20%;
+}
+.footer-card #text{
+    width: 75%;
+}
+.footer-card #text h2{
+    color: #ccc;
+    margin-bottom: 10px;
+}
+.footer-card #text h5{
+    margin-bottom: 10px;
+}
+.footer-card #text p{
+    font-size: 12px;
+}
+.footer-card #img-footer img{
+    width: 100%;
+}
+#hamburguer,#close{
+    display: none;
+   
+}
+
+@media (max-width:480px){
+    #hamburguer,#close{
+        display: none;
+        position: absolute;
+        top: 38px;
+        right: 10%;
+    }
+    #close{
+        display: none;
+        z-index: 10;
+    }
+    #logo{
+        width: 13%;
+    }
+    #logo img{
+        width: 100%;
+    }
+
+    header #menu {
+        display: none;
+        background-color:#d0cccc;
+        position: absolute;
+        top:0;
+        right: 0;
+        flex-direction: column;
+        padding: 60px 0;
+        width:60% ;
+
+    }
+    #menu li{
+        margin: 30px auto;
+    }
+    #content{
+        flex-direction: column;
+    }
+    #content section{
+        width: 100%;
+    }
+    #content aside{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #textos{
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+    #textos>p, #textos, #descripcion{
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer .footer-card{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-card #img-footer{
+        width: 30px;
+        margin-right: 20px;
+    }
+    #banner #img-desktop{
+        display: none;
+    }
+    #banner #img-mobile{
+        display: none;
+    }
+}
